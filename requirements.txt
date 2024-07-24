@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+werkzeug
+langchain
+llama_index
+transformers
+torch
+huggingface_hub
+pydantic
