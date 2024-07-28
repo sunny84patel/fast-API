@@ -10,6 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from werkzeug.utils import secure_filename
 import huggingface_hub
 from llama_index.core import PromptTemplate
+from flask import render_template, request,jsonify
 import torch
 import os
 
@@ -83,6 +84,9 @@ embed_model = HuggingFaceEmbedding(model_name="nomic-ai/nomic-embed-text-v1", tr
 Settings.llm = llm2
 Settings.embed_model = embed_model
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 @app.post("/convert")
 async def convert_file(file: UploadFile = File(...)):
     if not file:

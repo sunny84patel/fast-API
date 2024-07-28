@@ -1,0 +1,330 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #343434;
+  }
+  
+  #toggle-menu-btn{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .column-left{
+    background-color: #28282B;
+    height: 100vh;
+    overflow-y: auto;
+    width: 250px;
+    transition: width 0.3s ease;
+  }
+  
+  .column-right{
+    height: 100vh;
+    overflow-y: auto;
+    width: calc(100% - 300px);
+    transition: width 0.3s ease;
+  }
+  
+  #menu-toggle:checked + .column-left{
+    width: 0;
+  }
+  
+  #menu-toggle:checked ~ .column-right{
+    width: 100%;
+  }
+  
+  .company-logo{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+  }
+  
+  .inzint-left-column-bottom{
+    height: 70px;
+    border-top: 1px solid rgba(255, 255, 255, 0.075);
+  }
+  
+  .inzint-left-column-top{
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  
+  .inzint-left-column-bottom .dropdown-toggle::after{
+    display: none;
+  }
+  
+  .inzint-profile-btn{
+    color: white;
+    background-color: transparent ;
+    padding: 0.5rem;
+    margin: 0;
+    border-radius: 10px;
+    border: 0 !important;
+    border-color: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+  }
+  
+  .inzint-profile-btn:hover, .inzint-profile-btn:active{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white !important;
+  }
+  
+  .name-circle{
+    background-color: orangered;
+    color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-right: 7px;
+  }
+  
+  /* Navbar */
+  
+  .inzint-navbar{
+    height: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+  }
+  
+  .inzint-chat-input{
+    height: 70px;
+    border-top: 1px solid rgba(255, 255, 255, 0.075);
+  }
+  
+  .inzint-chat-message{
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+  }
+  
+  /* Chatbox */
+  
+  .message-container{
+    max-width: 75%;
+    margin-left: auto;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+  }
+  
+  .user-message{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: auto;
+    border-radius: 20px 20px 0 20px;
+  }
+  
+  .user-message p{
+    margin-top: 0;
+    margin-bottom: 0 !important;
+  }
+  
+  .message-container-bot{
+    max-width: 75%;
+    margin-right: auto;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+  }
+  
+  .bot-message{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: auto;
+    border-radius: 20px 20px 20px 0;
+  }
+  
+  .bot-message p, li{
+    margin-bottom: 0.75rem;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .question-container {
+    border: 0.5px solid rgb(145, 143, 143);
+    width: 75%;
+    padding: 20px;
+    color: white;
+    background-color: #28282B;
+    border-radius: 8px;
+    margin-top: auto;
+    margin-bottom: 10px;
+    /* margin-left: 240px; */
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    font-size: large;
+    font-weight: 50px;
+  }
+  
+  .answer-container {
+    flex-direction: column;
+    width: 85%;
+    padding: 20px;
+    color: white;
+    background-color: #28282B;
+    border-radius: 8px;
+    border: 1px white;
+    margin-top: 10px;
+    /* margin-left: 240px; */
+    overflow-y: auto;
+    max-height: calc(100vh - 250px);
+    display: none;
+    font-size: large;
+    font-weight: 50px;
+  }
+  
+  #question-input {
+    width: 60vw;
+    height: 40px;
+    color: white;
+    background-color: #28282B;
+    border: none;
+    outline: none;
+    font-size: large;
+  }
+  
+  .submit-icon,
+  .pdf-icon,
+  .voice-icon {
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 15px;
+    background-color: #28282B;
+  }
+  
+  /* .voice-icon:hover{
+  } */
+  input::placeholder {
+    color: white;
+  }
+  
+  #question-form {
+    background-color: #28282B;
+  }
+  input::placeholder {
+    color: white;
+  }
+  
+  #question-form {
+    background-color: #28282B;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 3px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  .loading-animation {
+    margin-left: 0;
+  }
+  
+  .loading-animation::after {
+    content: ".";
+    animation: loading 1s infinite;
+    font-size: 55px;
+    color: #49ef2b;
+  }
+  
+  @keyframes loading {
+    0% {
+      content: ".";
+    }
+  
+    33% {
+      content: "..";
+    }
+  
+    66% {
+      content: "...";
+    }
+  }
+  
+  
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    color: white;
+    font-weight: 10px;
+  }
+  
+  .suggested {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+  
+  .suggest {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+  
+  .suggestion {
+    display: flex;
+    color: white;
+    background-color: #28282B;
+    border: 0.5px solid rgb(145, 143, 143);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: large;
+    cursor: pointer;
+  }
+  .upload-icon {
+    cursor: pointer;
+  }
+  
+  
+  .answer-icon {
+  width: 25px; /* Adjust size as needed */
+  height: 25px; /* Adjust size as needed */
+  margin-right: 15px; /* Adjust spacing */
+  border-radius: 12px;
+  border: 1px solid rgb(255, 255, 255);
+  }
+  #suggested-questions{
+    display: none;
+  }
+  #suggested-heading{
+    display: none;
+  }
+  .upload{
+    color: white;
+    margin-left: 500px;
+    margin-top: 10px;
+  }
